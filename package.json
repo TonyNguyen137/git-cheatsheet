@@ -1,0 +1,24 @@
+{
+	"name": "learngit.io",
+	"version": "1.0.0",
+	"description": "Restore file to the last commit",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier . --write",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.2.0",
+		"@commitlint/config-conventional": "^20.2.0",
+		"@eslint/js": "^9.39.2",
+		"eslint": "^9.39.2",
+		"globals": "^16.5.0",
+		"prettier": "3.7.4"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs"
+}
