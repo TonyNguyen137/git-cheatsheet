@@ -203,6 +203,8 @@ Pull
 - **`git pull --ff-only`**  
   Updates the branch **only if a fast-forward is possible**; if the branches are divergent, the pull **aborts without making any changes**.
 
+## Rebase
+
 ## Collaboration (Fork + Upstream Workflow)
 
 Use this workflow when you want to contribute to someone else’s repository (or test PRs) from another GitHub account.
