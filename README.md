@@ -55,7 +55,7 @@ You can:
     git config --global user.name "Your name"
     git config --global user.email "email@domain.com"
 
-### show global
+### Show global
 
     git config --global --list
 
@@ -68,6 +68,19 @@ Restore file to the last commit
 Remove file from staging area
 
     git restore --staged <filename>
+
+---
+
+## Updating Commits
+
+    # Stage the changes you want to add to the last commit
+
+    git add <file(s)>
+
+    git commit --amend -m 'Updated commit message'
+
+    # without message
+    git commit --amend --no-edit
 
 ---
 
@@ -104,8 +117,7 @@ See only deleted files from last commit
 
 ## Reset (delete last commit)
 
-Delete commit  
-Man befindet sich im letzten commit + modified Daten
+    # Undo the latest commit. Changes will move back to the working repository
 
     git reset HEAD~1
 
