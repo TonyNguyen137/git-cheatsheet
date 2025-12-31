@@ -181,6 +181,28 @@ Cancel merge
 
     git merge --abort
 
+Pull
+
+    git fetch <branch-name>
+    git merge <brach-name>
+
+    or
+
+    git pull
+
+### When branches are divergent
+
+(Local and remote both have new commits)
+
+- **`git pull --rebase`**  
+  Fetches remote commits and reapplies your local commits on top of them, resulting in a **linear history without a merge commit**.
+
+- **`git pull --no-rebase`** _(merge)_  
+  Fetches remote commits and **merges** them into your branch, creating a **merge commit** that preserves the parallel history.
+
+- **`git pull --ff-only`**  
+  Updates the branch **only if a fast-forward is possible**; if the branches are divergent, the pull **aborts without making any changes**.
+
 ## Collaboration (Fork + Upstream Workflow)
 
 Use this workflow when you want to contribute to someone else’s repository (or test PRs) from another GitHub account.
