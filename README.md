@@ -50,14 +50,27 @@ You can:
 
 ## Configuration
 
+    # Set Global name & e-mail
     git config <scope> <config-name> <config-value>
 
     git config --global user.name "Your name"
     git config --global user.email "email@domain.com"
 
-### Show global
+    # Set Lokal name & e-mail
+    git config user.name "your name"
+    git config user.email "your e-mail"
+
+    # Show username & e-mail
+    git config --show-origin --get user.name
+    git config --show-origin --get user.e-mail
+
+    # Show global
 
     git config --global --list
+
+    # Reset author & e-mail
+
+    git commit --amend --reset-author --no-edit
 
 ## Restore / Staging
 
