@@ -167,3 +167,57 @@ Switch to `main` first if you want to merge into main
 Cancel merge
 
     git merge --abort
+
+## Collaboration (Fork + Upstream Workflow)
+
+Use this workflow when you want to contribute to someone else’s repository (or test PRs) from another GitHub account.
+
+### 1) Fork the repository
+
+Fork the original repo on GitHub to create your own copy under your account (this is where you can push changes).
+
+### 2) Clone your fork locally
+
+Clone the fork to your machine so you can work on it locally.
+
+    git clone https://github.com/<your-username>/<repo>.git
+    cd <repo>
+
+### 3) Add the original repository as `upstream`
+
+Add the original repo as a second remote so you can pull updates from it later.
+
+    git remote add upstream https://github.com/<original-owner>/<repo>.git
+
+Check your remotes:
+
+    git remote -v
+
+### 4) Create a new branch for your change
+
+Work on a separate branch so your main branch stays clean.
+
+    git switch -c <branch-name>
+
+### 5) Commit and push your changes to your fork
+
+Push to `origin` (your fork). The original repo is not affected yet.
+
+    git add .
+    git commit -m "docs: update README"
+    git push -u origin <branch-name>
+
+### 6) Open a Pull Request
+
+On GitHub, open a Pull Request from your fork/branch into the original repository.
+
+---
+
+### Keeping your fork up to date
+
+Fetch updates from the original repo and sync your local main branch.
+
+    git fetch upstream
+    git switch main
+    git rebase upstream/main
+    git push origin main
